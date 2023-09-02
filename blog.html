@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-4/5 mx-auto flex justify-center gap-5">
+        <div class="w-96 mt-20 p-3 shadow-lg shadow-gray-400 bg-gradient-to-r from-blue-200 to-blue-300 rounded-xl">
+            <div>
+                <h3 class="text-xl font-bold text-black mb-2">
+                    <span class="text-orange-500">Question (1)</span> : Discuss the scope of var, let, and const? <br>
+                </h3>
+                <p class="text-black font-semibold">
+                    <span class="text-orange-500 font-bold">Answer :</span>  These are namely, 'let,' 'var,' and 'const' keywords. Since ES6 standard, the three keywords are available for users to declare variables without initializing them.
+                    All three of these keywords have similarities in their syntax for declaring variables. However, they differ in their usage and scope, as detailed in the below.
+                    <ul>
+                        <li class="mb-4 mt-4 font-medium"><span class="text-orange-500 font-bold">(1) Var :</span> <span class="text-black font-bold"> (i)</span> Variables declared with var are in the function scope. <br>
+                            <span class="text-black font-bold">(ii)</span> It gets hoisted to the top of its scope and initialized undefined. <br>
+                            <span class="text-black font-bold">(iii) </span> Can be declared without initialization. <br>
+                            <span class="text-black font-bold">(iv)</span> Can be accessed without initialization as its default value is “undefined”
+                        </li>
+                        <li class="mb-4 font-medium"><span class="text-orange-500 font-bold">(2) Let :</span> <span class="text-black font-bold"> (i)</span> Variables declared as let are in the block scope. <br>
+                            <span class="text-black font-bold"> (ii)</span> It also got hoisted to the top of its scope but didn't initialize. <br>
+                            <span class="text-black font-bold"> (iii)</span> Can be declared without initialization. <br>
+                            <span class="text-black font-bold"> (iv)</span> Cannot be accessed without initialization, leading to 'referenceError'.
+                        </li>
+                        <li class="mb-4 font-medium"><span class="text-orange-500 font-bold">(3) Const :</span> <span class="text-black font-bold"> (i)</span> Variables declared as let are in the block scope. <br>
+                            <span class="text-black font-bold"> (ii)</span> It also got hoisted to the top of its scope but didn't initialize. <br>
+                            <span class="text-black font-bold"> (iii)</span> Cannot be declared without initialization. <br>
+                            <span class="text-black font-bold"> (iv)</span> Cannot be accessed without initialization, as it cannot be declared without initialization in the first place.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            </div>
+            <div class="w-96 h-fit mt-20 p-3 shadow-lg shadow-gray-400 bg-gradient-to-r from-blue-200 to-blue-300 rounded-xl">
+                <h3 class="text-xl font-bold text-black mb-2">
+                  <span class="text-orange-500">Question (2) : </span>  Tell us the use cases of null and undefined :
+                </h3>
+                <p class="text-black font-semibold mb-4">
+                    <span class="text-orange-500 font-bold">Answer :</span> Undefined means a variable has been declared but has yet not been assigned a value. <br> Null is an assignment value. It can be assigned to a variable as a representation of no value.
+                </p>
+                <h3 class="text-xl font-bold text-black mb-2">
+                    <span class="text-orange-500">Question (3) : </span> What do you mean by REST API?
+                </h3>
+                <p class="text-black font-semibold mb-4">
+                    <span class="text-orange-500 font-bold">Answer :</span>
+                    A REST API is a way of easily accessing web services without having excess processing. Whenever a RESTful API is called, the server will transfer to the client a representation of the state of the requested resource. 
+                </p>
+            </div>
+        </div>
+</body>
+</html>

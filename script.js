@@ -15,10 +15,22 @@ const handleCategory = async() => {
 
     const handleLoadVideos = async(categoryId) => {
         const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
-        const data = await response.json(); 
-        
+        const data = await response.json();
         const cardContainer=document.getElementById("card-container");
         cardContainer.innerHTML = "";
+        cardContainer.classList.add("grid");
+
+        if (data.status === false ) {
+          const noContent = document.createElement("div");
+          noContent.innerHTML =`
+          <div class="mt-40 lg:ml-20 space-y-8">
+          <img class="mx-auto" src="./Icon.png">
+          <h1 class="text-3xl font-bold text-center text-black" >Oops!! Sorry, There is no <br> content here</h1>
+          </div>
+          `;
+          cardContainer.appendChild(noContent);
+          cardContainer.classList.remove("grid");
+        }
 
         data.data.forEach((videos) => {
             const release = videos?.others?.posted_date;
@@ -40,7 +52,7 @@ const handleCategory = async() => {
                 <h4 class="font-bold text-[#171717]">${videos.title}</h4>
                 <div class="flex gap-3">
                 <p class="text-[#171717b3]">${videos.authors[0].profile_name}</p> 
-                <p class="text-[#171717b3]">${videos.authors[0].verified?'<img src="fi_10629607.svg">':''}</p>
+                <p class="text-[#171717b3]">${videos.authors[0].verified?'<img src="./fi_10629607.svg">':''}</p>
                  
                 </div>
                 <p class="text-[#171717b3]">${videos.others.views} views</p>
